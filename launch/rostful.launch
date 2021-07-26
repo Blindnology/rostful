@@ -1,12 +1,12 @@
 <launch>
   <!-- ******************************* Arguments ******************************* -->
-  <arg name="rostful_bind" default="127.0.0.1"/>
+  <arg name="rostful_bind" default="0.0.0.0"/>
   <arg name="rostful_port" default="8080"/>
   <arg name="rostful_server" default="flask"/>
   <!-- <arg name="rostful_config" default=""/> -->
 
-  <arg name="topics" default="['turtle1/pose']" />
-  <arg name="services" default="[]" />
+  <arg name="topics" default="[]" />
+  <arg name="services" default="['/waypoint_nav/waypoint_nav_node/make_plan']" />
   <arg name="params" default="[]" />
   <arg name="enable_cache" default="false"/>  <!-- since connection_cache is not widely known&used, dont expect it by default -->
   <arg name="connection_cache_list" default="/connection_cache/list" doc="topic to listen for connection cache list of connections"/>
