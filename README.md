@@ -45,8 +45,15 @@ Installation
 
 `pip install flask`
 
+`pip install pyros-interfaces-ros`
+
 `sudo apt install ros-melodic-pyros-utils`
 
+Download dependencies
+
+`git submodules init`
+
+`git submodules update --remote`
 
 ROS service can take time, so we need to update Web server timeouts.
 
