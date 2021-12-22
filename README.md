@@ -42,18 +42,17 @@ to be able to use the setup.py currently provided in rostful.
 
 Installation
 ============
-
-`pip install flask`
-
-`pip install pyros-interfaces-ros`
+`pip install pip install pyros-interfaces-ros pytest-timeout==1.4.2 pyros==0.4.2 flask`
 
 `sudo apt install ros-melodic-pyros-utils`
 
+**Note:** The `pytest-timeout` version >= `2.0.0` does not support `python 2.x`.
+
 Download dependencies
 
-`git submodules init`
+`git submodule init`
 
-`git submodules update --remote`
+`git submodule update`
 
 ROS service can take time, so we need to update Web server timeouts.
 
@@ -64,3 +63,4 @@ send timeout to 1 minute
 receive timeout to 5 minutes
 
 ```sudo sed -i 's/recv_timeout=5000/recv_timeout=300000/g' /home/ubuntu/.local/lib/python2.7/site-packages/pyzmp/service.py```
+
